@@ -1,15 +1,15 @@
 namespace Programming_Assessment
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
 
         private void btn_ToDo_Click(object sender, EventArgs e)
         {
-            //this.Close();
+            Hide();
             ToDo f2 = new ToDo();
             f2.Show();
         }
@@ -23,6 +23,21 @@ namespace Programming_Assessment
         {
             Calendar f4 = new Calendar();
             f4.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Main m = new Main();
+            Hide();
+            m.Show();
+
+        }
+
+        private void btn_Diary_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Diary d = new Diary();
+            d.Show();
         }
     }
 }

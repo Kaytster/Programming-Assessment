@@ -20,20 +20,23 @@ namespace Programming_Assessment
         }
 
         // Method to add item to CheckedListBox
-        public void AddItemToCheckedListBox(string item) { chk_List.Items.Add(item); }
+        public void AddItemToCheckedListBox(string item)
+        {
+            chk_List.Items.Add(item);
+        }
 
         private void btn_AddTask_Click(object sender, EventArgs e)
         {
-            AddToDo addToDo = new AddToDo(this); addToDo.Show();
+            AddToDo addToDo = new AddToDo(this);
+            addToDo.Show();
         }
 
-        
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Main m = new Main();
+            Hide();
+            m.Show();
 
-
+        }
     }
 }
-
-        
-    
-
-

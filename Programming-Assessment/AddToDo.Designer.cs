@@ -36,25 +36,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(136, 21);
+            label1.Location = new Point(119, 16);
             label1.Name = "label1";
-            label1.Size = new Size(80, 20);
+            label1.Size = new Size(63, 15);
             label1.TabIndex = 0;
             label1.Text = "Add a Task";
             // 
             // txt_Add
             // 
-            txt_Add.Location = new Point(67, 44);
+            txt_Add.Location = new Point(59, 33);
+            txt_Add.Margin = new Padding(3, 2, 3, 2);
             txt_Add.Multiline = true;
             txt_Add.Name = "txt_Add";
-            txt_Add.Size = new Size(213, 138);
+            txt_Add.Size = new Size(187, 104);
             txt_Add.TabIndex = 1;
+            txt_Add.TextChanged += txt_Add_TextChanged;
             // 
             // btn_SubmitTask
             // 
-            btn_SubmitTask.Location = new Point(122, 206);
+            btn_SubmitTask.Location = new Point(107, 154);
+            btn_SubmitTask.Margin = new Padding(3, 2, 3, 2);
             btn_SubmitTask.Name = "btn_SubmitTask";
-            btn_SubmitTask.Size = new Size(94, 29);
+            btn_SubmitTask.Size = new Size(82, 22);
             btn_SubmitTask.TabIndex = 2;
             btn_SubmitTask.Text = "Submit";
             btn_SubmitTask.UseVisualStyleBackColor = true;
@@ -62,13 +65,14 @@
             // 
             // AddToDo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
-            ClientSize = new Size(349, 319);
+            ClientSize = new Size(305, 239);
             Controls.Add(btn_SubmitTask);
             Controls.Add(txt_Add);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AddToDo";
             Text = "AddToDo";
             ResumeLayout(false);
