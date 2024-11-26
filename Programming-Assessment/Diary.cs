@@ -55,14 +55,66 @@ namespace Programming_Assessment
 
         }
 
-        public void daySelected()
+        public void daySelected(object sender, EventArgs e)
         {
+            Button clickedButton = (sender as Button)!;
 
+            MessageBox.Show($"{clickedButton.Text} + {tab_Diary.TabPages[]}");
         }
 
         private void menu_Notes_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Diary_Load(object sender, EventArgs e)
+        {
+            //Size 104w, 44h
+            for (int i = 0; i < 7; i++)
+            {
+                Button b = new Button();
+                b.Text = $"{i + 1}";
+                b.Height = 44;
+                b.Width = 104;
+                b.Click += daySelected;
+                flow_1.Controls.Add(b);
+            }
+            for (int i = 7; i < 14; i++)
+            {
+                Button b = new Button();
+                b.Text = $"{i + 1}";
+                b.Height = 44;
+                b.Width = 104;
+                b.Click += daySelected;
+                flow_2.Controls.Add(b);
+            }
+            for (int i = 14; i < 21; i++)
+            {
+                Button b = new Button();
+                b.Text = $"{i + 1}";
+                b.Height = 44;
+                b.Width = 104;
+                b.Click += daySelected;
+                flow_3.Controls.Add(b);
+            }
+            for (int i = 21; i < 28; i++)
+            {
+                Button b = new Button();
+                b.Text = $"{i + 1}";
+                b.Height = 44;
+                b.Width = 104;
+                b.Click += daySelected;
+                flow_4.Controls.Add(b);
+            }
+            for (int i = 28; i < 31; i++)
+            {
+                Button b = new Button();
+                b.Text = $"{i + 1}";
+                b.Height = 44;
+                b.Width = 104;
+                b.Click += daySelected;
+                flow_5.Controls.Add(b);
+            }
         }
     }
 
