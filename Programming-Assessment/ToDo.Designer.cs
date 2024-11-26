@@ -32,11 +32,11 @@
             label1 = new Label();
             btn_AddTask = new Button();
             menuStrip1 = new MenuStrip();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             toDoToolStripMenuItem = new ToolStripMenuItem();
             diaryToolStripMenuItem = new ToolStripMenuItem();
             notesToolStripMenuItem = new ToolStripMenuItem();
             calendarToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,12 +73,20 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.CornflowerBlue;
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toDoToolStripMenuItem, diaryToolStripMenuItem, notesToolStripMenuItem, calendarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(678, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(43, 20);
+            toolStripMenuItem1.Text = "<<<";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // toDoToolStripMenuItem
             // 
@@ -104,18 +112,11 @@
             calendarToolStripMenuItem.Size = new Size(66, 20);
             calendarToolStripMenuItem.Text = "Calendar";
             // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(43, 20);
-            toolStripMenuItem1.Text = "<<<";
-            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
-            // 
             // ToDo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Lavender;
+            BackColor = Color.Thistle;
             ClientSize = new Size(678, 519);
             Controls.Add(btn_AddTask);
             Controls.Add(label1);
