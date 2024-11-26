@@ -57,9 +57,12 @@ namespace Programming_Assessment
 
         public void daySelected(object sender, EventArgs e)
         {
+            int selectedTab = tab_Diary.SelectedIndex;
+            //use switch to set each index to the correct month
+
             Button clickedButton = (sender as Button)!;
 
-            MessageBox.Show($"{clickedButton.Text} + {tab_Diary.TabPages[]}");
+            MessageBox.Show($"{clickedButton.Text} + {selectedTab}");
         }
 
         private void menu_Notes_Click_1(object sender, EventArgs e)
