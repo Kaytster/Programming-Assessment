@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,12 +59,34 @@ namespace Programming_Assessment
         public void daySelected(object sender, EventArgs e)
         {
             int selectedTab = tab_Diary.SelectedIndex;
-            //use switch to set each index to the correct month
+            string month = "";
+
+            switch (tab_Diary.SelectedIndex)
+            {
+                case 0: month = "January"; break;
+                case 1: month = "February"; break;
+                case 2: month = "March"; break;
+                case 3: month = "April"; break;
+                case 4: month = "May"; break;
+                case 5: month = "June"; break;
+                case 6: month = "July"; break;
+                case 7: month = "August"; break;
+                case 8: month = "September"; break;
+                case 9: month = "October"; break;
+                case 10: month = "November"; break;
+                case 11: month = "December"; break;
+            }
 
             Button clickedButton = (sender as Button)!;
 
-            MessageBox.Show($"{clickedButton.Text} + {selectedTab}");
+            MessageBox.Show($"{month} {clickedButton.Text}");
         }
+
+        private void DayClick(object sender, EventArgs e)
+        {
+            
+        }
+
 
         private void menu_Notes_Click_1(object sender, EventArgs e)
         {
@@ -81,6 +104,7 @@ namespace Programming_Assessment
                 b.Width = 104;
                 b.Click += daySelected;
                 flow_1.Controls.Add(b);
+                flow_6.Controls.Add(b);
             }
             for (int i = 7; i < 14; i++)
             {
@@ -118,6 +142,7 @@ namespace Programming_Assessment
                 b.Click += daySelected;
                 flow_5.Controls.Add(b);
             }
+
         }
     }
 

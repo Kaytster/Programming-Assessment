@@ -29,7 +29,7 @@ namespace Programming_Assessment
             for (int i = 0; i < 7; i++)
             {
                 Button b = new Button();
-                b.Text = $"{i+1}";
+                b.Text = $"{i + 1}";
                 b.Height = 100;
                 b.Click += DayClick;
                 row1.Controls.Add(b);
