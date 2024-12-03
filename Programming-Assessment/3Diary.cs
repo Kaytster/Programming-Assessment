@@ -83,7 +83,7 @@ namespace Programming_Assessment
 
             Button clickedButton = (sender as Button)!;
 
-            //MessageBox.Show($"{month} {clickedButton.Text}");
+            MessageBox.Show($"{month} {clickedButton.Text}");
         }
 
         private void DayClick(object sender, EventArgs e)
@@ -91,10 +91,38 @@ namespace Programming_Assessment
             
         }
 
-
-
         private void Diary_Load(object sender, EventArgs e)
         {
+
+            //for (int tabMonthIndex = 0; tabMonthIndex < 12; tabMonthIndex++) 
+            {
+                TabPage tp = tab_Diary.TabPages[1];
+
+                for (int i = 0; i < 5; i++)
+                {
+                    // create a FlowLayoutPanel and set the properties
+                    // add the flow layout to the Copntolrs propertie of the tab
+                    FlowLayoutPanel p = new FlowLayoutPanel();
+                    p.Height = 48;
+                    p.Width = 772;
+                    p.BorderStyle = BorderStyle.FixedSingle;
+                    int x = 7;
+                    p.Location = new Point(7, (x + 63) * i);
+                    tp.Controls.Add(p);
+
+                    for (int j = 0; j < 7; j++)
+                    {
+                        Button b = new Button();
+                        b.Text = $"{j + 1}";
+                        b.Height = 44;
+                        b.Width = 104;
+                        b.Click += daySelected;
+                        p.Controls.Add(b);
+                    }
+                }
+            }
+
+
             //Size 104w, 44h
             for (int i = 0; i < 7; i++)
             {

@@ -42,6 +42,7 @@
             lsvEvents = new ListView();
             colEventTitle = new ColumnHeader();
             colEventDate = new ColumnHeader();
+            label2 = new Label();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +56,6 @@
             monthCalendar.TabIndex = 0;
             monthCalendar.TitleBackColor = Color.Thistle;
             monthCalendar.TrailingForeColor = Color.CornflowerBlue;
-            monthCalendar.DateSelected += addEvent;
             // 
             // menu
             // 
@@ -146,19 +146,29 @@
             // colEventTitle
             // 
             colEventTitle.Text = "Event name";
-            colEventTitle.Width = 100;
+            colEventTitle.Width = 173;
             // 
             // colEventDate
             // 
             colEventDate.Text = "Event date";
-            colEventDate.Width = 120;
+            colEventDate.Width = 173;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(318, 173);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 7;
+            label2.Text = "label2";
             // 
             // Calendar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
-            ClientSize = new Size(737, 818);
+            ClientSize = new Size(737, 434);
+            Controls.Add(label2);
             Controls.Add(lsvEvents);
             Controls.Add(label1);
             Controls.Add(btn_AddEvent);
@@ -168,6 +178,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Calendar";
             Text = "Calendar";
+            Load += Calendar_Load;
             menu.ResumeLayout(false);
             menu.PerformLayout();
             ResumeLayout(false);
@@ -190,5 +201,6 @@
         private ListView lsvEvents;
         private ColumnHeader colEventTitle;
         private ColumnHeader colEventDate;
+        private Label label2;
     }
 }

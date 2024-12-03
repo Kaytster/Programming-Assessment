@@ -26,14 +26,7 @@ namespace Programming_Assessment
 
         private void egg_samples_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 7; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 100;
-                b.Click += DayClick;
-                row1.Controls.Add(b);
-            }
+            
         }
     }
 }
