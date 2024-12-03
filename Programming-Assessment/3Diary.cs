@@ -41,6 +41,10 @@ namespace Programming_Assessment
             //Diary d = new Diary();
             //d.Show();
         }
+        private void menu_Notes_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
         //Calendar Button
         private void menu_Calendar_Click(object sender, EventArgs e)
@@ -79,7 +83,7 @@ namespace Programming_Assessment
 
             Button clickedButton = (sender as Button)!;
 
-            MessageBox.Show($"{month} {clickedButton.Text}");
+            //MessageBox.Show($"{month} {clickedButton.Text}");
         }
 
         private void DayClick(object sender, EventArgs e)
@@ -88,10 +92,6 @@ namespace Programming_Assessment
         }
 
 
-        private void menu_Notes_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void Diary_Load(object sender, EventArgs e)
         {
@@ -104,7 +104,6 @@ namespace Programming_Assessment
                 b.Width = 104;
                 b.Click += daySelected;
                 flow_1.Controls.Add(b);
-                flow_6.Controls.Add(b);
             }
             for (int i = 7; i < 14; i++)
             {

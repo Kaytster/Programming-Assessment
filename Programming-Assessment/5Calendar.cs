@@ -21,5 +21,22 @@ namespace Programming_Assessment
         {
 
         }
+
+        private void btn_AddEvent_Click(object sender, EventArgs e)
+        {
+            if(txt_AddEvent.Text.Trim().Length > 0)
+            {
+
+                ListViewItem listViewItem = new ListViewItem(txt_AddEvent.Text);
+                listViewItem.SubItems.Add(monthCalendar.SelectionStart.ToString());
+
+                lsvEvents.Items.Add(listViewItem);
+            }
+            else
+            {
+                MessageBox.Show("Provide a name for the event to add it.");
+            }
+            
+        }
     }
 }
