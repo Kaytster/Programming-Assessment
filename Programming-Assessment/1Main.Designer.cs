@@ -34,12 +34,12 @@
             menu_Diary = new ToolStripMenuItem();
             menu_Notes = new ToolStripMenuItem();
             menu_Calendar = new ToolStripMenuItem();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             btn_ToDo = new Button();
             btn_Diary = new Button();
             btn_Calendar = new Button();
             btn_Notes = new Button();
-            settingsToolStripMenuItem = new ToolStripMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -86,20 +86,32 @@
             menu_Calendar.Size = new Size(66, 20);
             menu_Calendar.Text = "Calendar";
             // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Size = new Size(61, 20);
+            settingsToolStripMenuItem.Text = "Settings";
+            // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Ink Free", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 36);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Tahoma", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(46, 40);
             label1.Name = "label1";
-            label1.Size = new Size(947, 120);
+            label1.Size = new Size(992, 116);
             label1.TabIndex = 1;
             label1.Text = "Welcome to the Program!\r\nPlease choose an option below to get started.\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btn_ToDo
             // 
-            btn_ToDo.BackColor = Color.Transparent;
+            btn_ToDo.BackColor = Color.BlueViolet;
+            btn_ToDo.FlatAppearance.BorderColor = Color.Indigo;
+            btn_ToDo.FlatStyle = FlatStyle.Flat;
+            btn_ToDo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_ToDo.ForeColor = Color.CornflowerBlue;
             btn_ToDo.Location = new Point(23, 184);
             btn_ToDo.Margin = new Padding(3, 2, 3, 2);
             btn_ToDo.Name = "btn_ToDo";
@@ -111,17 +123,23 @@
             // 
             // btn_Diary
             // 
+            btn_Diary.BackColor = Color.BlueViolet;
+            btn_Diary.FlatAppearance.BorderColor = Color.Indigo;
+            btn_Diary.FlatStyle = FlatStyle.Flat;
+            btn_Diary.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Diary.ForeColor = Color.CornflowerBlue;
             btn_Diary.Location = new Point(302, 184);
             btn_Diary.Margin = new Padding(3, 2, 3, 2);
             btn_Diary.Name = "btn_Diary";
             btn_Diary.Size = new Size(214, 173);
             btn_Diary.TabIndex = 3;
             btn_Diary.Text = "Diary";
-            btn_Diary.UseVisualStyleBackColor = true;
+            btn_Diary.UseVisualStyleBackColor = false;
             btn_Diary.Click += btn_Diary_Click;
             // 
             // btn_Calendar
             // 
+            btn_Calendar.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Calendar.Location = new Point(847, 184);
             btn_Calendar.Margin = new Padding(3, 2, 3, 2);
             btn_Calendar.Name = "btn_Calendar";
@@ -133,18 +151,13 @@
             // 
             // btn_Notes
             // 
+            btn_Notes.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Notes.Location = new Point(580, 184);
             btn_Notes.Name = "btn_Notes";
             btn_Notes.Size = new Size(214, 173);
             btn_Notes.TabIndex = 5;
             btn_Notes.Text = "Notes";
             btn_Notes.UseVisualStyleBackColor = true;
-            // 
-            // settingsToolStripMenuItem
-            // 
-            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(61, 20);
-            settingsToolStripMenuItem.Text = "Settings";
             // 
             // Main
             // 
