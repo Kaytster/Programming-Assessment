@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -37,9 +38,9 @@ namespace Programming_Assessment
         //Notes Button
         private void menu_Notes_Click(object sender, EventArgs e)
         {
-            //Hide();
-            //Diary d = new Diary();
-            //d.Show();
+            Hide();
+            Notes n = new Notes();
+            n.Show();
         }
         private void menu_Notes_Click_1(object sender, EventArgs e)
         {
@@ -52,12 +53,6 @@ namespace Programming_Assessment
             Hide();
             Calendar c = new Calendar();
             c.Show();
-        }
-
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void daySelected(object sender, EventArgs e)
@@ -82,13 +77,9 @@ namespace Programming_Assessment
             }
 
             Button clickedButton = (sender as Button)!;
-
-            MessageBox.Show($"{month} {clickedButton.Text}");
-        }
-
-        private void DayClick(object sender, EventArgs e)
-        {
-            
+            DiaryPage page = new DiaryPage();
+            page.Show();
+            //MessageBox.Show($"{month} {clickedButton.Text}");
         }
 
         private void Diary_Load(object sender, EventArgs e)
@@ -121,8 +112,6 @@ namespace Programming_Assessment
                     }
                 }
             }
-
-
             //Size 104w, 44h
             for (int i = 0; i < 7; i++)
             {
@@ -169,6 +158,7 @@ namespace Programming_Assessment
                 b.Click += daySelected;
                 flow_5.Controls.Add(b);
             }
+            
 
         }
     }

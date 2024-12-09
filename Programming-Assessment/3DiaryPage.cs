@@ -19,7 +19,6 @@ namespace Programming_Assessment
         public void AddItemToTextBox(string item)
         {
             txt_DiaryText.Text = item;
-
         }
 
         private void btn_Entry_Click(object sender, EventArgs e)
@@ -31,8 +30,6 @@ namespace Programming_Assessment
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Hide();
-            Diary d = new Diary();
-            d.Show();
         }
     }
 }

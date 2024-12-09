@@ -7,14 +7,6 @@ namespace Programming_Assessment
             InitializeComponent();
         }
 
-        //Menu
-        private void menu_Back_Click(object sender, EventArgs e)
-        {
-            Main m = new Main();
-            Hide();
-            m.Show();
-        }
-
         //To-Do Button
         private void btn_ToDo_Click(object sender, EventArgs e)
         {
@@ -30,6 +22,15 @@ namespace Programming_Assessment
             Diary d = new Diary();
             d.Show();
         }
+
+        //Notes Button
+        private void btn_Notes_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Notes n = new Notes();
+            n.Show();
+        }
+
 
         //Calendar Button
         private void btn_Calendar_Click(object sender, EventArgs e)
