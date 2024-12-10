@@ -67,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Thistle;
+            BackColor = Color.FromArgb(227, 213, 255);
             ClientSize = new Size(305, 239);
             Controls.Add(btn_SubmitTask);
             Controls.Add(txt_Add);

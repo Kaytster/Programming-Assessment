@@ -14,10 +14,11 @@ namespace Programming_Assessment
     public partial class DiaryPage : Form
     {
         private Button source;
-        public DiaryPage(Button source)
+        public DiaryPage(Button source, string title)
         {
             InitializeComponent();
             this.source = source;
+            lbl_Date.Text = title;
         }
         public void AddItemToTextBox(string item)
         {

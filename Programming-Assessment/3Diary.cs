@@ -52,6 +52,25 @@ namespace Programming_Assessment
             int selectedTab = tab_Diary.SelectedIndex;
             string month = "";
 
+            Button b = sender as Button;
+            FlowLayoutPanel flp = b.Parent as FlowLayoutPanel;
+
+            // create a counter starting at 0
+            foreach(Button currentButton in  flp.Controls)
+            {
+                bool btnSend;
+                if ((currentButton == sender) == true)
+                {
+                    btnSend = true;
+                    
+                }
+
+                // check if the current button is the sender button, if it is, we have the index and can work out the day of the week by doing a remainder 7 thing
+
+                // add 1 to the counter
+            }
+
+                
             switch (tab_Diary.SelectedIndex)
             {
                 case 0: month = "January"; break;
@@ -69,7 +88,7 @@ namespace Programming_Assessment
             }
 
             Button clickedButton = (sender as Button)!;
-            DiaryPage page = new DiaryPage((Button)sender);
+            DiaryPage page = new DiaryPage((Button)sender, "title");
             page.Show();
             //MessageBox.Show($"{month} {clickedButton.Text}");
         }

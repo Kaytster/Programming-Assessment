@@ -50,9 +50,10 @@
             // 
             // rtb_Notes
             // 
-            rtb_Notes.Location = new Point(12, 119);
+            rtb_Notes.Location = new Point(10, 89);
+            rtb_Notes.Margin = new Padding(3, 2, 3, 2);
             rtb_Notes.Name = "rtb_Notes";
-            rtb_Notes.Size = new Size(822, 506);
+            rtb_Notes.Size = new Size(720, 380);
             rtb_Notes.TabIndex = 0;
             rtb_Notes.Text = "";
             rtb_Notes.TextChanged += rtb_Notes_TextChanged;
@@ -64,58 +65,59 @@
             menu.Items.AddRange(new ToolStripItem[] { menu_Back, menu_ToDo, menu_Diary, menu_Notes, menu_Calendar, settingsToolStripMenuItem });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
-            menu.Padding = new Padding(6, 3, 0, 3);
-            menu.Size = new Size(847, 30);
+            menu.Padding = new Padding(5, 2, 0, 2);
+            menu.Size = new Size(741, 24);
             menu.TabIndex = 1;
             menu.Text = "menu";
             // 
             // menu_Back
             // 
             menu_Back.Name = "menu_Back";
-            menu_Back.Size = new Size(53, 24);
+            menu_Back.Size = new Size(43, 20);
             menu_Back.Text = "<<<";
             menu_Back.Click += menu_Back_Click;
             // 
             // menu_ToDo
             // 
             menu_ToDo.Name = "menu_ToDo";
-            menu_ToDo.Size = new Size(91, 24);
+            menu_ToDo.Size = new Size(72, 20);
             menu_ToDo.Text = "To-Do List";
             menu_ToDo.Click += menu_ToDo_Click;
             // 
             // menu_Diary
             // 
             menu_Diary.Name = "menu_Diary";
-            menu_Diary.Size = new Size(58, 24);
+            menu_Diary.Size = new Size(46, 20);
             menu_Diary.Text = "Diary";
             menu_Diary.Click += menu_Diary_Click;
             // 
             // menu_Notes
             // 
             menu_Notes.Name = "menu_Notes";
-            menu_Notes.Size = new Size(62, 24);
+            menu_Notes.Size = new Size(50, 20);
             menu_Notes.Text = "Notes";
             menu_Notes.Click += menu_Notes_Click;
             // 
             // menu_Calendar
             // 
             menu_Calendar.Name = "menu_Calendar";
-            menu_Calendar.Size = new Size(82, 24);
+            menu_Calendar.Size = new Size(66, 20);
             menu_Calendar.Text = "Calendar";
             menu_Calendar.Click += menu_Calendar_Click;
             // 
             // settingsToolStripMenuItem
             // 
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(76, 24);
+            settingsToolStripMenuItem.Size = new Size(61, 20);
             settingsToolStripMenuItem.Text = "Settings";
             // 
             // btn_Save
             // 
             btn_Save.Font = new Font("Segoe UI", 10.8F);
-            btn_Save.Location = new Point(12, 44);
+            btn_Save.Location = new Point(10, 33);
+            btn_Save.Margin = new Padding(3, 2, 3, 2);
             btn_Save.Name = "btn_Save";
-            btn_Save.Size = new Size(94, 60);
+            btn_Save.Size = new Size(82, 45);
             btn_Save.TabIndex = 2;
             btn_Save.Text = "Save";
             btn_Save.UseVisualStyleBackColor = true;
@@ -124,9 +126,10 @@
             // btn_Colour
             // 
             btn_Colour.Font = new Font("Segoe UI", 10.8F);
-            btn_Colour.Location = new Point(164, 44);
+            btn_Colour.Location = new Point(144, 33);
+            btn_Colour.Margin = new Padding(3, 2, 3, 2);
             btn_Colour.Name = "btn_Colour";
-            btn_Colour.Size = new Size(94, 60);
+            btn_Colour.Size = new Size(82, 45);
             btn_Colour.TabIndex = 3;
             btn_Colour.Text = "Colour";
             btn_Colour.UseVisualStyleBackColor = true;
@@ -135,9 +138,10 @@
             // btn_Font
             // 
             btn_Font.Font = new Font("Segoe UI", 10.8F);
-            btn_Font.Location = new Point(315, 44);
+            btn_Font.Location = new Point(276, 33);
+            btn_Font.Margin = new Padding(3, 2, 3, 2);
             btn_Font.Name = "btn_Font";
-            btn_Font.Size = new Size(94, 60);
+            btn_Font.Size = new Size(82, 45);
             btn_Font.TabIndex = 4;
             btn_Font.Text = "Font";
             btn_Font.UseVisualStyleBackColor = true;
@@ -146,9 +150,10 @@
             // btn_Highlight
             // 
             btn_Highlight.Font = new Font("Segoe UI", 10.8F);
-            btn_Highlight.Location = new Point(466, 44);
+            btn_Highlight.Location = new Point(408, 33);
+            btn_Highlight.Margin = new Padding(3, 2, 3, 2);
             btn_Highlight.Name = "btn_Highlight";
-            btn_Highlight.Size = new Size(94, 60);
+            btn_Highlight.Size = new Size(82, 45);
             btn_Highlight.TabIndex = 5;
             btn_Highlight.Text = "Highlight";
             btn_Highlight.UseVisualStyleBackColor = true;
@@ -158,9 +163,9 @@
             // 
             lbl_Char.AutoSize = true;
             lbl_Char.Font = new Font("Segoe UI", 10.8F);
-            lbl_Char.Location = new Point(615, 44);
+            lbl_Char.Location = new Point(538, 33);
             lbl_Char.Name = "lbl_Char";
-            lbl_Char.Size = new Size(98, 25);
+            lbl_Char.Size = new Size(81, 20);
             lbl_Char.TabIndex = 6;
             lbl_Char.Text = "Characters:";
             // 
@@ -168,9 +173,9 @@
             // 
             lbl_Word.AutoSize = true;
             lbl_Word.Font = new Font("Segoe UI", 10.8F);
-            lbl_Word.Location = new Point(615, 84);
+            lbl_Word.Location = new Point(538, 63);
             lbl_Word.Name = "lbl_Word";
-            lbl_Word.Size = new Size(68, 25);
+            lbl_Word.Size = new Size(54, 20);
             lbl_Word.TabIndex = 7;
             lbl_Word.Text = "Words:";
             // 
@@ -178,9 +183,9 @@
             // 
             lbl_CharCount.AutoSize = true;
             lbl_CharCount.Font = new Font("Segoe UI", 10.8F);
-            lbl_CharCount.Location = new Point(733, 44);
+            lbl_CharCount.Location = new Point(641, 33);
             lbl_CharCount.Name = "lbl_CharCount";
-            lbl_CharCount.Size = new Size(33, 25);
+            lbl_CharCount.Size = new Size(27, 20);
             lbl_CharCount.TabIndex = 8;
             lbl_CharCount.Text = "---";
             // 
@@ -188,18 +193,18 @@
             // 
             lbl_WordCount.AutoSize = true;
             lbl_WordCount.Font = new Font("Segoe UI", 10.8F);
-            lbl_WordCount.Location = new Point(733, 84);
+            lbl_WordCount.Location = new Point(641, 63);
             lbl_WordCount.Name = "lbl_WordCount";
-            lbl_WordCount.Size = new Size(33, 25);
+            lbl_WordCount.Size = new Size(27, 20);
             lbl_WordCount.TabIndex = 9;
             lbl_WordCount.Text = "---";
             // 
             // Notes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Thistle;
-            ClientSize = new Size(847, 637);
+            BackColor = Color.FromArgb(227, 213, 255);
+            ClientSize = new Size(741, 478);
             Controls.Add(lbl_WordCount);
             Controls.Add(lbl_CharCount);
             Controls.Add(lbl_Word);
@@ -210,7 +215,6 @@
             Controls.Add(btn_Save);
             Controls.Add(menu);
             Controls.Add(rtb_Notes);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Notes";
             Text = "Notes";
             Load += Notes_Load;

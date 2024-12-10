@@ -42,7 +42,6 @@
             lsvEvents = new ListView();
             colEventTitle = new ColumnHeader();
             colEventDate = new ColumnHeader();
-            label2 = new Label();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -153,22 +152,12 @@
             colEventDate.Text = "Event date";
             colEventDate.Width = 173;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(318, 173);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 7;
-            label2.Text = "label2";
-            // 
             // Calendar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Thistle;
+            BackColor = Color.FromArgb(227, 213, 255);
             ClientSize = new Size(737, 434);
-            Controls.Add(label2);
             Controls.Add(lsvEvents);
             Controls.Add(label1);
             Controls.Add(btn_AddEvent);
@@ -201,6 +190,5 @@
         private ListView lsvEvents;
         private ColumnHeader colEventTitle;
         private ColumnHeader colEventDate;
-        private Label label2;
     }
 }

@@ -34,17 +34,19 @@
             // 
             // rtb_DiaryEntry
             // 
-            rtb_DiaryEntry.Location = new Point(12, 12);
+            rtb_DiaryEntry.Location = new Point(10, 9);
+            rtb_DiaryEntry.Margin = new Padding(3, 2, 3, 2);
             rtb_DiaryEntry.Name = "rtb_DiaryEntry";
-            rtb_DiaryEntry.Size = new Size(776, 352);
+            rtb_DiaryEntry.Size = new Size(680, 265);
             rtb_DiaryEntry.TabIndex = 0;
             rtb_DiaryEntry.Text = "";
             // 
             // btn_AddEntry
             // 
-            btn_AddEntry.Location = new Point(295, 370);
+            btn_AddEntry.Location = new Point(258, 278);
+            btn_AddEntry.Margin = new Padding(3, 2, 3, 2);
             btn_AddEntry.Name = "btn_AddEntry";
-            btn_AddEntry.Size = new Size(206, 82);
+            btn_AddEntry.Size = new Size(180, 62);
             btn_AddEntry.TabIndex = 1;
             btn_AddEntry.Text = "Add Entry";
             btn_AddEntry.UseVisualStyleBackColor = true;
@@ -52,11 +54,13 @@
             // 
             // AddEntry
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(227, 213, 255);
+            ClientSize = new Size(700, 338);
             Controls.Add(btn_AddEntry);
             Controls.Add(rtb_DiaryEntry);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AddEntry";
             Text = "AddEntry";
             ResumeLayout(false);

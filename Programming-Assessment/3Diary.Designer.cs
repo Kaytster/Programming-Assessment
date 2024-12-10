@@ -38,26 +38,26 @@
             tab_Jan = new TabPage();
             flow_1 = new FlowLayoutPanel();
             tab_Feb = new TabPage();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             tab_Mar = new TabPage();
             flowLayoutPanel10 = new FlowLayoutPanel();
             tab_Apr = new TabPage();
             flowLayoutPanel15 = new FlowLayoutPanel();
             tab_May = new TabPage();
             flowLayoutPanel20 = new FlowLayoutPanel();
+            tab_Jun = new TabPage();
+            flowLayoutPanel25 = new FlowLayoutPanel();
             tab_Jul = new TabPage();
             flowLayoutPanel30 = new FlowLayoutPanel();
             tab_Aug = new TabPage();
-            tab_Sep = new TabPage();
-            tab_Oct = new TabPage();
-            tab_Nov = new TabPage();
-            tab_Dec = new TabPage();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel25 = new FlowLayoutPanel();
-            tab_Jun = new TabPage();
             flowLayoutPanel2 = new FlowLayoutPanel();
+            tab_Sep = new TabPage();
             flowLayoutPanel3 = new FlowLayoutPanel();
+            tab_Oct = new TabPage();
             flowLayoutPanel4 = new FlowLayoutPanel();
+            tab_Nov = new TabPage();
             flowLayoutPanel5 = new FlowLayoutPanel();
+            tab_Dec = new TabPage();
             flowLayoutPanel6 = new FlowLayoutPanel();
             menu.SuspendLayout();
             tab_Diary.SuspendLayout();
@@ -66,13 +66,13 @@
             tab_Mar.SuspendLayout();
             tab_Apr.SuspendLayout();
             tab_May.SuspendLayout();
+            tab_Jun.SuspendLayout();
             tab_Jul.SuspendLayout();
             tab_Aug.SuspendLayout();
             tab_Sep.SuspendLayout();
             tab_Oct.SuspendLayout();
             tab_Nov.SuspendLayout();
             tab_Dec.SuspendLayout();
-            tab_Jun.SuspendLayout();
             SuspendLayout();
             // 
             // menu
@@ -169,6 +169,14 @@
             tab_Feb.Text = "February";
             tab_Feb.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(3, 3);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(778, 335);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
             // tab_Mar
             // 
             tab_Mar.Controls.Add(flowLayoutPanel10);
@@ -226,6 +234,25 @@
             flowLayoutPanel20.Size = new Size(784, 341);
             flowLayoutPanel20.TabIndex = 5;
             // 
+            // tab_Jun
+            // 
+            tab_Jun.Controls.Add(flowLayoutPanel25);
+            tab_Jun.Location = new Point(4, 24);
+            tab_Jun.Name = "tab_Jun";
+            tab_Jun.Size = new Size(784, 341);
+            tab_Jun.TabIndex = 5;
+            tab_Jun.Text = "June";
+            tab_Jun.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel25
+            // 
+            flowLayoutPanel25.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel25.Dock = DockStyle.Fill;
+            flowLayoutPanel25.Location = new Point(0, 0);
+            flowLayoutPanel25.Name = "flowLayoutPanel25";
+            flowLayoutPanel25.Size = new Size(784, 341);
+            flowLayoutPanel25.TabIndex = 5;
+            // 
             // tab_Jul
             // 
             tab_Jul.Controls.Add(flowLayoutPanel30);
@@ -255,6 +282,14 @@
             tab_Aug.Text = "August";
             tab_Aug.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Dock = DockStyle.Fill;
+            flowLayoutPanel2.Location = new Point(0, 0);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(784, 341);
+            flowLayoutPanel2.TabIndex = 0;
+            // 
             // tab_Sep
             // 
             tab_Sep.Controls.Add(flowLayoutPanel3);
@@ -264,6 +299,14 @@
             tab_Sep.TabIndex = 8;
             tab_Sep.Text = "September";
             tab_Sep.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel3
+            // 
+            flowLayoutPanel3.Dock = DockStyle.Fill;
+            flowLayoutPanel3.Location = new Point(0, 0);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(784, 341);
+            flowLayoutPanel3.TabIndex = 0;
             // 
             // tab_Oct
             // 
@@ -275,6 +318,14 @@
             tab_Oct.Text = "October";
             tab_Oct.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.Dock = DockStyle.Fill;
+            flowLayoutPanel4.Location = new Point(0, 0);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(784, 341);
+            flowLayoutPanel4.TabIndex = 0;
+            // 
             // tab_Nov
             // 
             tab_Nov.Controls.Add(flowLayoutPanel5);
@@ -285,6 +336,14 @@
             tab_Nov.Text = "November";
             tab_Nov.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel5
+            // 
+            flowLayoutPanel5.Dock = DockStyle.Fill;
+            flowLayoutPanel5.Location = new Point(0, 0);
+            flowLayoutPanel5.Name = "flowLayoutPanel5";
+            flowLayoutPanel5.Size = new Size(784, 341);
+            flowLayoutPanel5.TabIndex = 0;
+            // 
             // tab_Dec
             // 
             tab_Dec.Controls.Add(flowLayoutPanel6);
@@ -294,65 +353,6 @@
             tab_Dec.TabIndex = 11;
             tab_Dec.Text = "December";
             tab_Dec.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(3, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(778, 335);
-            flowLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel25
-            // 
-            flowLayoutPanel25.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanel25.Dock = DockStyle.Fill;
-            flowLayoutPanel25.Location = new Point(0, 0);
-            flowLayoutPanel25.Name = "flowLayoutPanel25";
-            flowLayoutPanel25.Size = new Size(784, 341);
-            flowLayoutPanel25.TabIndex = 5;
-            // 
-            // tab_Jun
-            // 
-            tab_Jun.Controls.Add(flowLayoutPanel25);
-            tab_Jun.Location = new Point(4, 24);
-            tab_Jun.Name = "tab_Jun";
-            tab_Jun.Size = new Size(784, 341);
-            tab_Jun.TabIndex = 5;
-            tab_Jun.Text = "June";
-            tab_Jun.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Dock = DockStyle.Fill;
-            flowLayoutPanel2.Location = new Point(0, 0);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(784, 341);
-            flowLayoutPanel2.TabIndex = 0;
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Dock = DockStyle.Fill;
-            flowLayoutPanel3.Location = new Point(0, 0);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(784, 341);
-            flowLayoutPanel3.TabIndex = 0;
-            // 
-            // flowLayoutPanel4
-            // 
-            flowLayoutPanel4.Dock = DockStyle.Fill;
-            flowLayoutPanel4.Location = new Point(0, 0);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(784, 341);
-            flowLayoutPanel4.TabIndex = 0;
-            // 
-            // flowLayoutPanel5
-            // 
-            flowLayoutPanel5.Dock = DockStyle.Fill;
-            flowLayoutPanel5.Location = new Point(0, 0);
-            flowLayoutPanel5.Name = "flowLayoutPanel5";
-            flowLayoutPanel5.Size = new Size(784, 341);
-            flowLayoutPanel5.TabIndex = 0;
             // 
             // flowLayoutPanel6
             // 
@@ -366,7 +366,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Thistle;
+            BackColor = Color.FromArgb(227, 213, 255);
             ClientSize = new Size(800, 450);
             Controls.Add(tab_Diary);
             Controls.Add(menu);
@@ -381,13 +381,13 @@
             tab_Mar.ResumeLayout(false);
             tab_Apr.ResumeLayout(false);
             tab_May.ResumeLayout(false);
+            tab_Jun.ResumeLayout(false);
             tab_Jul.ResumeLayout(false);
             tab_Aug.ResumeLayout(false);
             tab_Sep.ResumeLayout(false);
             tab_Oct.ResumeLayout(false);
             tab_Nov.ResumeLayout(false);
             tab_Dec.ResumeLayout(false);
-            tab_Jun.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }

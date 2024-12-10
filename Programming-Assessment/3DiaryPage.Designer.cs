@@ -95,7 +95,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Thistle;
+            BackColor = Color.FromArgb(227, 213, 255);
             ClientSize = new Size(700, 338);
             Controls.Add(lbl_Date);
             Controls.Add(btn_Back);

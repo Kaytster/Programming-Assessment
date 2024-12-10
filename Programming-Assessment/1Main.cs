@@ -20,7 +20,8 @@ namespace Programming_Assessment
         {
             Hide();
             Diary d = new Diary();
-            d.Show();
+            d.ShowDialog();
+            Show();
         }
 
         //Notes Button
@@ -30,7 +31,6 @@ namespace Programming_Assessment
             Notes n = new Notes();
             n.Show();
         }
-
 
         //Calendar Button
         private void btn_Calendar_Click(object sender, EventArgs e)
