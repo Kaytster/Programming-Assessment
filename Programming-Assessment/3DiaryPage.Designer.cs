@@ -38,9 +38,10 @@
             // 
             // btn_Entry
             // 
-            btn_Entry.Location = new Point(694, 13);
+            btn_Entry.Location = new Point(607, 10);
+            btn_Entry.Margin = new Padding(3, 2, 3, 2);
             btn_Entry.Name = "btn_Entry";
-            btn_Entry.Size = new Size(94, 29);
+            btn_Entry.Size = new Size(82, 22);
             btn_Entry.TabIndex = 0;
             btn_Entry.Text = "Add Entry";
             btn_Entry.UseVisualStyleBackColor = true;
@@ -50,28 +51,32 @@
             // 
             groupBox1.BackColor = Color.IndianRed;
             groupBox1.Controls.Add(txt_DiaryText);
-            groupBox1.Location = new Point(23, 47);
+            groupBox1.Location = new Point(20, 35);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(654, 391);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(572, 293);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
             // txt_DiaryText
             // 
-            txt_DiaryText.Location = new Point(6, 23);
+            txt_DiaryText.Location = new Point(5, 17);
+            txt_DiaryText.Margin = new Padding(3, 2, 3, 2);
             txt_DiaryText.Multiline = true;
             txt_DiaryText.Name = "txt_DiaryText";
             txt_DiaryText.ReadOnly = true;
-            txt_DiaryText.Size = new Size(642, 362);
+            txt_DiaryText.Size = new Size(562, 272);
             txt_DiaryText.TabIndex = 0;
             // 
             // btn_Back
             // 
             btn_Back.BackColor = Color.CornflowerBlue;
-            btn_Back.Location = new Point(12, 13);
+            btn_Back.Location = new Point(10, 10);
+            btn_Back.Margin = new Padding(3, 2, 3, 2);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(53, 29);
+            btn_Back.Size = new Size(46, 22);
             btn_Back.TabIndex = 2;
             btn_Back.Text = "<<<";
             btn_Back.UseVisualStyleBackColor = false;
@@ -80,24 +85,26 @@
             // lbl_Date
             // 
             lbl_Date.AutoSize = true;
-            lbl_Date.Location = new Point(328, 13);
+            lbl_Date.Location = new Point(287, 10);
             lbl_Date.Name = "lbl_Date";
-            lbl_Date.Size = new Size(50, 20);
+            lbl_Date.Size = new Size(38, 15);
             lbl_Date.TabIndex = 3;
             lbl_Date.Text = "label1";
             // 
             // DiaryPage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(lbl_Date);
             Controls.Add(btn_Back);
             Controls.Add(groupBox1);
             Controls.Add(btn_Entry);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DiaryPage";
             Text = "DiaryPage";
+            Load += DiaryPage_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
+using System.Runtime.CompilerServices;
 
 namespace Programming_Assessment
 {
     public partial class Diary : Form
     {
+
         public Diary()
         {
             InitializeComponent();
@@ -77,9 +69,40 @@ namespace Programming_Assessment
             }
 
             Button clickedButton = (sender as Button)!;
-            DiaryPage page = new DiaryPage();
+            DiaryPage page = new DiaryPage((Button)sender);
             page.Show();
             //MessageBox.Show($"{month} {clickedButton.Text}");
+        }
+
+        private int DayeOfWeekToNum(DayOfWeek day)
+        {
+            int dayInt = 0;
+            switch (day)
+            {
+                case DayOfWeek.Monday:
+                    dayInt = 1;
+                    break;
+                case DayOfWeek.Tuesday:
+                    dayInt = 2;
+                    break;
+                case DayOfWeek.Wednesday:
+                    dayInt = 3;
+                    break;
+                case DayOfWeek.Thursday:
+                    dayInt = 4;
+                    break;
+                case DayOfWeek.Friday:
+                    dayInt = 5;
+                    break;
+                case DayOfWeek.Saturday:
+                    dayInt = 6;
+                    break;
+                case DayOfWeek.Sunday:
+                    dayInt = 7;
+                    break;
+            }
+
+            return dayInt;
         }
 
         private void Diary_Load(object sender, EventArgs e)
@@ -87,78 +110,107 @@ namespace Programming_Assessment
 
             //for (int tabMonthIndex = 0; tabMonthIndex < 12; tabMonthIndex++) 
             {
-                TabPage tp = tab_Diary.TabPages[1];
+                int year = DateTime.Now.Year;
 
-                for (int i = 0; i < 5; i++)
+                for (int monthTab = 0; monthTab < tab_Diary.TabPages.Count; monthTab++)
                 {
-                    // create a FlowLayoutPanel and set the properties
-                    // add the flow layout to the Copntolrs propertie of the tab
-                    FlowLayoutPanel p = new FlowLayoutPanel();
-                    p.Height = 48;
-                    p.Width = 772;
-                    p.BorderStyle = BorderStyle.FixedSingle;
-                    int x = 7;
-                    p.Location = new Point(7, (x + 63) * i);
-                    tp.Controls.Add(p);
+                    int month = monthTab + 1;
+                    TabPage tp = tab_Diary.TabPages[monthTab];
+                    FlowLayoutPanel flowPanel = (FlowLayoutPanel) tp.Controls[0];
 
-                    for (int j = 0; j < 7; j++)
+                    int buttonWidth = (flowPanel.Width / 7) - 10;
+                    int buttonHeight = (flowPanel.Height / 7) - 5;
+
+                    flowPanel.Height = 48;
+                    List<int> days = Enumerable.Range(1, DateTime.DaysInMonth(year, month)).ToList();
+                    foreach (int day in days)
                     {
+                        DateTime date = new DateTime(DateTime.Now.Year, month, day);
+                        
                         Button b = new Button();
-                        b.Text = $"{j + 1}";
-                        b.Height = 44;
-                        b.Width = 104;
+                        b.Text = $"{day} ({date.DayOfWeek})";
+                        b.Height = buttonHeight;
+                        b.Width = buttonWidth;
                         b.Click += daySelected;
-                        p.Controls.Add(b);
+                        flowPanel.Controls.Add(b);
                     }
                 }
+
+
+
+
+
+
+                //for (int i = 0; i < 5; i++)
+                //{
+                //    // create a FlowLayoutPanel and set the properties
+                //    // add the flow layout to the Copntolrs propertie of the tab
+                //    FlowLayoutPanel p = new FlowLayoutPanel();
+                //    p.Height = 48;
+                //    p.Width = 772;
+                //    p.BorderStyle = BorderStyle.FixedSingle;
+                //    int x = 7;
+                //    p.Location = new Point(7, (x + 63) * i);
+                //    tp.Controls.Add(p);
+
+                //    for (int j = 0; j < 7; j++)
+                //    {
+                //        Button b = new Button();
+                //        b.Text = $"{j + 1}";
+                //        b.Height = 44;
+                //        b.Width = 104;
+                //        b.Click += daySelected;
+                //        p.Controls.Add(b);
+                //    }
+                //}
             }
             //Size 104w, 44h
-            for (int i = 0; i < 7; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 44;
-                b.Width = 104;
-                b.Click += daySelected;
-                flow_1.Controls.Add(b);
-            }
-            for (int i = 7; i < 14; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 44;
-                b.Width = 104;
-                b.Click += daySelected;
-                flow_2.Controls.Add(b);
-            }
-            for (int i = 14; i < 21; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 44;
-                b.Width = 104;
-                b.Click += daySelected;
-                flow_3.Controls.Add(b);
-            }
-            for (int i = 21; i < 28; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 44;
-                b.Width = 104;
-                b.Click += daySelected;
-                flow_4.Controls.Add(b);
-            }
-            for (int i = 28; i < 31; i++)
-            {
-                Button b = new Button();
-                b.Text = $"{i + 1}";
-                b.Height = 44;
-                b.Width = 104;
-                b.Click += daySelected;
-                flow_5.Controls.Add(b);
-            }
-            
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    Button b = new Button();
+            //    b.Text = $"{i + 1}";
+            //    b.Height = 44;
+            //    b.Width = 104;
+            //    b.Click += daySelected;
+            //    flow_1.Controls.Add(b);
+            //}
+            //for (int i = 7; i < 14; i++)
+            //{
+            //    Button b = new Button();
+            //    b.Text = $"{i + 1}";
+            //    b.Height = 44;
+            //    b.Width = 104;
+            //    b.Click += daySelected;
+            //    flow_2.Controls.Add(b);
+            //}
+            //for (int i = 14; i < 21; i++)
+            //{
+            //    Button b = new Button();
+            //    b.Text = $"{i + 1}";
+            //    b.Height = 44;
+            //    b.Width = 104;
+            //    b.Click += daySelected;
+            //    flow_3.Controls.Add(b);
+            //}
+            //for (int i = 21; i < 28; i++)
+            //{
+            //    Button b = new Button();
+            //    b.Text = $"{i + 1}";
+            //    b.Height = 44;
+            //    b.Width = 104;
+            //    b.Click += daySelected;
+            //    flow_4.Controls.Add(b);
+            //}
+            //for (int i = 28; i < 31; i++)
+            //{
+            //    Button b = new Button();
+            //    b.Text = $"{i + 1}";
+            //    b.Height = 44;
+            //    b.Width = 104;
+            //    b.Click += daySelected;
+            //    flow_5.Controls.Add(b);
+            //}
+
 
         }
     }
