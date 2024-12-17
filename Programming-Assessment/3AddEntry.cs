@@ -22,10 +22,11 @@ namespace Programming_Assessment
 
         private void btn_AddEntry_Click(object sender, EventArgs e)
         {
-            string text = rtb_DiaryEntry.Text;
-            diaryPage.AddItemToTextBox(text);
-            Hide();
-
+            //Button sourceButton = new Button(); 
+            //string title = "New Entry"; 
+            //DiaryPage diaryPage = new DiaryPage(sourceButton, title);
+            //DiaryPage.setDiary(rtb_DiaryEntry.Text);
+            diaryPage.setDiary(rtb_DiaryEntry.Text);
         }
     }
 }

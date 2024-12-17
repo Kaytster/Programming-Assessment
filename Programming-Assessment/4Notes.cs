@@ -22,15 +22,15 @@ namespace Programming_Assessment
         {
             Main m = new Main();
             Hide();
-            m.Show();
+            m.ShowDialog();
         }
 
         //To-Do Button
         private void menu_ToDo_Click(object sender, EventArgs e)
         {
             Hide();
-            ToDo f2 = new ToDo();
-            f2.Show();
+            ToDo t = new ToDo();
+            t.ShowDialog();
         }
 
         //Diary Button
@@ -38,7 +38,7 @@ namespace Programming_Assessment
         {
             Hide();
             Diary d = new Diary();
-            d.Show();
+            d.ShowDialog();
         }
 
         //Notes Button
@@ -46,7 +46,7 @@ namespace Programming_Assessment
         {
             Hide();
             Notes n = new Notes();
-            n.Show();
+            n.ShowDialog();
         }
 
         //Calendar Button
@@ -54,12 +54,12 @@ namespace Programming_Assessment
         {
             Hide();
             Calendar c = new Calendar();
-            c.Show();
+            c.ShowDialog();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            string relativePath = @"..\..\..\..\Programming-Assessment\Notes.txt";
+            string relativePath = @"..\..\..\..\Programming-Assessment\Files\Notes.txt";
             string fullPath = Path.GetFullPath(relativePath, AppDomain.CurrentDomain.BaseDirectory);
 
             using (StreamWriter sw = new StreamWriter(fullPath))
@@ -73,7 +73,7 @@ namespace Programming_Assessment
 
         private void Notes_Load(object sender, EventArgs e)
         {
-            string relativePath = @"..\..\..\..\Programming-Assessment\Notes.txt";
+            string relativePath = @"..\..\..\..\Programming-Assessment\Files\Notes.txt";
             string fullPath = Path.GetFullPath(relativePath, AppDomain.CurrentDomain.BaseDirectory);
             using (StreamReader sr = new StreamReader(fullPath))
             {

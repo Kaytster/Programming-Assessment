@@ -48,8 +48,7 @@
             // monthCalendar
             // 
             monthCalendar.BackColor = Color.CornflowerBlue;
-            monthCalendar.Location = new Point(57, 76);
-            monthCalendar.Margin = new Padding(8, 7, 8, 7);
+            monthCalendar.Location = new Point(65, 101);
             monthCalendar.MaxSelectionCount = 1;
             monthCalendar.Name = "monthCalendar";
             monthCalendar.TabIndex = 0;
@@ -63,59 +62,66 @@
             menu.Items.AddRange(new ToolStripItem[] { menu_Back, menu_ToDo, menu_Diary, menu_Notes, menu_Calendar, settingsToolStripMenuItem });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
-            menu.Padding = new Padding(5, 2, 0, 2);
-            menu.Size = new Size(737, 24);
+            menu.Padding = new Padding(6, 3, 0, 3);
+            menu.Size = new Size(842, 30);
             menu.TabIndex = 1;
             menu.Text = "menu";
             // 
             // menu_Back
             // 
             menu_Back.Name = "menu_Back";
-            menu_Back.Size = new Size(43, 20);
+            menu_Back.Size = new Size(53, 24);
             menu_Back.Text = "<<<";
+            menu_Back.Click += menu_Back_Click;
             // 
             // menu_ToDo
             // 
             menu_ToDo.Name = "menu_ToDo";
-            menu_ToDo.Size = new Size(72, 20);
+            menu_ToDo.Size = new Size(91, 24);
             menu_ToDo.Text = "To-Do List";
+            menu_ToDo.Click += menu_ToDo_Click;
             // 
             // menu_Diary
             // 
             menu_Diary.Name = "menu_Diary";
-            menu_Diary.Size = new Size(46, 20);
+            menu_Diary.Size = new Size(58, 24);
             menu_Diary.Text = "Diary";
+            menu_Diary.Click += menu_Diary_Click;
             // 
             // menu_Notes
             // 
             menu_Notes.Name = "menu_Notes";
-            menu_Notes.Size = new Size(50, 20);
+            menu_Notes.Size = new Size(62, 24);
             menu_Notes.Text = "Notes";
+            menu_Notes.Click += menu_Notes_Click;
             // 
             // menu_Calendar
             // 
             menu_Calendar.Name = "menu_Calendar";
-            menu_Calendar.Size = new Size(66, 20);
+            menu_Calendar.Size = new Size(82, 24);
             menu_Calendar.Text = "Calendar";
+            menu_Calendar.Click += menu_Calendar_Click;
             // 
             // settingsToolStripMenuItem
             // 
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(61, 20);
+            settingsToolStripMenuItem.Size = new Size(76, 24);
             settingsToolStripMenuItem.Text = "Settings";
             // 
             // txt_AddEvent
             // 
-            txt_AddEvent.Location = new Point(57, 262);
+            txt_AddEvent.Location = new Point(65, 349);
+            txt_AddEvent.Margin = new Padding(3, 4, 3, 4);
             txt_AddEvent.Name = "txt_AddEvent";
-            txt_AddEvent.Size = new Size(227, 23);
+            txt_AddEvent.Size = new Size(259, 27);
             txt_AddEvent.TabIndex = 2;
             // 
             // btn_AddEvent
             // 
-            btn_AddEvent.Location = new Point(92, 306);
+            btn_AddEvent.Location = new Point(105, 408);
+            btn_AddEvent.Margin = new Padding(3, 4, 3, 4);
             btn_AddEvent.Name = "btn_AddEvent";
-            btn_AddEvent.Size = new Size(163, 65);
+            btn_AddEvent.Size = new Size(186, 87);
             btn_AddEvent.TabIndex = 3;
             btn_AddEvent.Text = "Add Event";
             btn_AddEvent.UseVisualStyleBackColor = true;
@@ -125,9 +131,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(504, 38);
+            label1.Location = new Point(576, 51);
             label1.Name = "label1";
-            label1.Size = new Size(73, 25);
+            label1.Size = new Size(93, 33);
             label1.TabIndex = 5;
             label1.Text = "Events";
             // 
@@ -135,9 +141,10 @@
             // 
             lsvEvents.Columns.AddRange(new ColumnHeader[] { colEventTitle, colEventDate });
             lsvEvents.FullRowSelect = true;
-            lsvEvents.Location = new Point(379, 76);
+            lsvEvents.Location = new Point(433, 101);
+            lsvEvents.Margin = new Padding(3, 4, 3, 4);
             lsvEvents.Name = "lsvEvents";
-            lsvEvents.Size = new Size(346, 298);
+            lsvEvents.Size = new Size(395, 396);
             lsvEvents.TabIndex = 6;
             lsvEvents.UseCompatibleStateImageBehavior = false;
             lsvEvents.View = View.Details;
@@ -154,17 +161,16 @@
             // 
             // Calendar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(227, 213, 255);
-            ClientSize = new Size(737, 434);
+            ClientSize = new Size(842, 579);
             Controls.Add(lsvEvents);
             Controls.Add(label1);
             Controls.Add(btn_AddEvent);
             Controls.Add(txt_AddEvent);
             Controls.Add(menu);
             Controls.Add(monthCalendar);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Calendar";
             Text = "Calendar";
             Load += Calendar_Load;

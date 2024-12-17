@@ -11,8 +11,8 @@ namespace Programming_Assessment
         private void btn_ToDo_Click(object sender, EventArgs e)
         {
             Hide();
-            ToDo f2 = new ToDo();
-            f2.Show();
+            ToDo t = new ToDo();
+            t.ShowDialog();
         }
 
         //Diary Button
@@ -21,7 +21,6 @@ namespace Programming_Assessment
             Hide();
             Diary d = new Diary();
             d.ShowDialog();
-            Show();
         }
 
         //Notes Button
@@ -29,7 +28,7 @@ namespace Programming_Assessment
         {
             Hide();
             Notes n = new Notes();
-            n.Show();
+            n.ShowDialog();
         }
 
         //Calendar Button
@@ -37,7 +36,7 @@ namespace Programming_Assessment
         {
             Hide();
             Calendar c = new Calendar();
-            c.Show();
+            c.ShowDialog();
         }
 
     }

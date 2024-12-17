@@ -13,16 +13,14 @@ namespace Programming_Assessment
 {
     public partial class DiaryPage : Form
     {
+        //Getting which button has been clicked on to set the title of the page
         private Button source;
         public DiaryPage(Button source, string title)
         {
             InitializeComponent();
+
             this.source = source;
             lbl_Date.Text = title;
-        }
-        public void AddItemToTextBox(string item)
-        {
-            txt_DiaryText.Text = item;
         }
 
         private void btn_Entry_Click(object sender, EventArgs e)
@@ -35,12 +33,36 @@ namespace Programming_Assessment
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Hide();
+
+            SaveFileDialog FileSave = new SaveFileDialog();
+            FileSave.ShowDialog();
+            string pathtofile = FileSave.FileName;
+            StreamWriter sw = new StreamWriter(pathtofile);
+            sw.Write(txt_DiaryText.Text);
+            sw.Close();
+
+            MessageBox.Show("Saved");
+
         }
 
 
         private void DiaryPage_Load(object sender, EventArgs e)
         {
-            
+            OpenFileDialog FileOpen = new OpenFileDialog();
+            FileOpen.ShowDialog();
+            string pathtofile = FileOpen.FileName;
+            StreamReader sr = new StreamReader(pathtofile);
+            string line;
+
+            while ((line = sr.ReadLine()) != null)
+            {
+                txt_DiaryText.Text = txt_DiaryText.Text + "\n" + line;
+            }
+            sr.Close();
+        }
+        public void setDiary(string text)
+        {
+            txt_DiaryText.Text = text;
         }
     }
 }
